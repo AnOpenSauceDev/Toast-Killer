@@ -1,11 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.github.anopensaucedev.toastkiller.mixin",
+  "package": "com.github.anopensaucedev.toastkiller",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
   ],
   "client": [
+    "ToastKiller"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -2,25 +2,22 @@
   "schemaVersion": 1,
   "id": "toastkiller",
   "version": "${version}",
-
   "name": "The Open Sauce Toast Killer",
-  "description": "",
+  "description": "The best toast remover you've ever seen.",
   "authors": [],
-  "contact": {},
-
-  "license": "AGPL-3.0",
+  "contact": {
+    "repo": "https://github.com/"
+  },
+  "license": "Apache License 2.0",
   "icon": "assets/toastkiller/icon.png",
-
   "environment": "*",
-  "entrypoints": {},
-
-      "mixins": [
-        "toastkiller.mixins.json"
-      ],
-
+  "entrypoints": {
+  },
+  "mixins": [
+    "toastkiller.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-        "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": ">=1.14.4"
   }
 }

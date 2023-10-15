@@ -1,6 +1,5 @@
 package com.github.anopensaucedev.toastkiller;
 
-import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.toast.Toast;
 import net.minecraft.client.toast.ToastManager;
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ToastKiller {
 
     @Inject(method = "draw",at = @At("HEAD"),cancellable = true)
-    public void killToasts(DrawContext context, CallbackInfo ci){
+    public void killToasts(CallbackInfo ci){
         //Debug.Log("Killed a toast that tried to draw");
         ci.cancel();
     }
@@ -36,7 +35,7 @@ public class ToastKiller {
          * @reason prevent toasts rendering on the client
          */
         @Overwrite
-        public boolean draw(int x, DrawContext context) { // lie about drawing
+        public boolean draw(int x, int y) { // lie about drawing
             return true;
         }
     }
